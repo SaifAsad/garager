@@ -13,7 +13,7 @@
     <p>
         <asp:DropDownList ID="ddlType" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="ID">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GarageConnectionString %>" SelectCommand="SELECT * FROM [ProductType] ORDER BY [Name]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GarageDBConnectionString %>" SelectCommand="SELECT * FROM [ProductTypes]"></asp:SqlDataSource>
     </p>
     <p>
         Price:</p>
@@ -22,9 +22,9 @@
     </p>
     <p>
         Image:</p>
+        <asp:DropDownList ID="ddlImage" runat="server" DataSourceID="Images\Products"></asp:DropDownList>
     <p>
-        <asp:DropDownList ID="ddlImage" runat="server">
-        </asp:DropDownList>
+       
     </p>
     <p>
         Description:</p>
