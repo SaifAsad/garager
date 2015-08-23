@@ -89,7 +89,7 @@ public partial class Pages_Management_ManageProducts : System.Web.UI.Page
         Product product = new Product();
 
         product.Name = txtName.Text;
-        product.Price = Convert.ToDouble(txtPrice.Text);
+        product.Price = Convert.ToInt32(txtPrice.Text);
         product.TypeID = Convert.ToInt32(ddlType.SelectedValue);
         product.Description = txtDescription.Text;
         product.Image = ddlImage.SelectedValue;

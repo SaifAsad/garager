@@ -44,8 +44,8 @@ public partial class Pages_Product : System.Web.UI.Page
             lblDescription.Text = product.Description;
             lblPrice.Text = "Price per unit:<br/>£ " + product.Price;
             imgProduct.ImageUrl = "~/Images/Products/" + product.Image;
-            lblItemNr.Text = product.ID.ToString();
-
+            lblItemNr.Text = product.Id.ToString();
+            
             //Fill amount list with numbers 1-20
             int[] amount = Enumerable.Range(1, 20).ToArray();
             ddlAmount.DataSource = amount;
