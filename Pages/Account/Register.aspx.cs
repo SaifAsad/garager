@@ -35,8 +35,23 @@ public partial class Pages_Account_Register : Page
                 IdentityResult result = manager.Create(user, txtPassword.Text);
 
                 if (result.Succeeded)
-                {                 
-                    //Store user in DB
+                {
+                    UserInformation info = new UserInformation()
+                    {
+                        Address = txtAddress.Text,
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text,
+                        PostalCode = Convert.ToInt32(txtPostalCode.Text),
+                        //retreive the dynamically generateed key from the current logged in user
+                        GUID = user.Id
+                    };
+
+                    //send the user information object to the database
+                    UserInfoModel model = new UserInfoModel();
+                    model.InsertUserDetail(info);
+
+
+                     //Store user in DB
                     var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
 
                     //set to login new user by Cookie
