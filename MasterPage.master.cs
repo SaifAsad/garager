@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
@@ -15,7 +17,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         //to check if the user is logged in
         if(user.IsAuthenticated)
         {
-            //to retrieve the name of the cuurrent user
+            //to retrieve the name of the current user
             litStatus.Text = Context.User.Identity.Name;
 
             lnkLogin.Visible = false;
@@ -24,6 +26,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
             lnkLogut.Visible = true;
             litStatus.Visible = true;
 
+            CartModel model = new CartModel();
+            string userId = HttpContext.Current.User.Identity.GetUserId();
+            litStatus.Text = string.Format("{0} ({1})", Context.User.Identity.Name,
+                model.GetAmountOfOrders(userId));
 
         }
         else

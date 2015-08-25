@@ -5,6 +5,7 @@ using System.Web;
 
 /// <summary>
 /// Summary description for ProductModel
+/// perform insert, update, delete, get prodcut, get all products, get product by type
 /// </summary>
 public class ProductModel
 {
