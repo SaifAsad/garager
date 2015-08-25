@@ -31,8 +31,9 @@ public partial class Pages_Product : System.Web.UI.Page
                     ProductID = id
                 };
 
-                CartModel model = new CartModel();
-                lblResult.Text = model.InsertCart(cart);
+                CartModel cartModel = new CartModel();
+                lblResult.Text = cartModel.InsertCart(cart);
+                Response.Redirect("~/Index.aspx");
             }
             else
             {

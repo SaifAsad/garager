@@ -22,7 +22,7 @@
     </p>
     <p>
         Image:</p>
-        <asp:DropDownList ID="ddlImage" runat="server" DataSourceID="Images\Products"></asp:DropDownList>
+        <asp:DropDownList ID="ddlImage" runat="server"></asp:DropDownList>
     <p>
        
     </p>
