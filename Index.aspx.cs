@@ -6,6 +6,21 @@ public partial class Index : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        // Gets a reference to a TextBox control inside a ContentPlaceHolder
+        ContentPlaceHolder mpContentPlaceHolder;
+        TextBox mpTextBox;
+        mpContentPlaceHolder =(ContentPlaceHolder)Master.FindControl("ContentPlaceHolder1");
+        if (mpContentPlaceHolder != null)
+        {
+            mpTextBox = (TextBox)mpContentPlaceHolder.FindControl("TextBox1");
+            if (mpTextBox != null)
+            {
+                mpTextBox.Text = "TextBox found!";
+            }
+        }
+
+
+
         ProductModel model = new ProductModel();
         List<Product> products = model.GetAllProducts();
 

@@ -6,10 +6,10 @@
     <p>
         Name:</p>
     <p>
-        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtName" runat="server" Width="300px" CssClass="form-control"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" CssClass="btn btn-primary"/>
     </p>
     <p>
         <asp:Label ID="lblResult" runat="server"></asp:Label>

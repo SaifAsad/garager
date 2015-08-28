@@ -7,10 +7,5 @@
     <p>
         Your payment has been received. Thank you for your purchase.
     </p>
-    <p>
-        <small>
-            We won't actually send anything though.  Shhhhhhhh...
-        </small>
-    </p>
 </asp:Content>
 

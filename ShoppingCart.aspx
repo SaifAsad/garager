@@ -32,8 +32,8 @@
             <td>
                 <asp:LinkButton ID="lnkContinue" runat="server" PostBackUrl="~/Index.aspx" Text="Contiue Shopping" />
                 OR
-               <asp:Button ID="btnCheckOut" runat="server" Text="Continue to Checkout" PostBackUrl="~/Pages/Success.aspx"
-                   cssClass="button" Width="250px"/>
+               <asp:Button ID="btnCheckOut" runat="server" Text="Continue to Checkout" PostBackUrl="Success.aspx"
+                   cssClass="btn btn-primary btn-lg" Width="250px"/>
             </td>
         </tr>
     </table>
