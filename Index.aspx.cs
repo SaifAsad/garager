@@ -6,21 +6,6 @@ public partial class Index : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        // Gets a reference to a TextBox control inside a ContentPlaceHolder
-        ContentPlaceHolder mpContentPlaceHolder;
-        TextBox mpTextBox;
-        mpContentPlaceHolder =(ContentPlaceHolder)Master.FindControl("ContentPlaceHolder1");
-        if (mpContentPlaceHolder != null)
-        {
-            mpTextBox = (TextBox)mpContentPlaceHolder.FindControl("TextBox1");
-            if (mpTextBox != null)
-            {
-                mpTextBox.Text = "TextBox found!";
-            }
-        }
-
-
-
         ProductModel model = new ProductModel();
         List<Product> products = model.GetAllProducts();
 
@@ -33,7 +18,7 @@ public partial class Index : System.Web.UI.Page
                 {
                     ImageUrl = "~/Images/Products/" + product.Image,
                     CssClass = "productImage",
-                    PostBackUrl = string.Format("~/Pages/Product.aspx?id={0}", product.Id)
+                    PostBackUrl = string.Format("Product.aspx?id={0}", product.Id)
                 };
                 Label lblName = new Label
                 {
@@ -42,7 +27,7 @@ public partial class Index : System.Web.UI.Page
                 };
                 Label lblPrice = new Label
                 {
-                    Text = "£ " + product.Price,
+                    Text = "$ " + product.Price,
                     CssClass = "productPrice"
                 };
 

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" PostBackUrl="~/Pages/Management/ManageProducts.aspx">Add new Product</asp:LinkButton>
+    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-primary" PostBackUrl="ManageProducts.aspx">Add new Product</asp:LinkButton>
 <br />
 <p style="clear: both"></p>
 <asp:GridView ID="grdProducts" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="sdsProduct" Width="100%" AllowPaging="True" AllowSorting="True" OnRowEditing="grdProducts_RowEditing" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -49,7 +49,7 @@
     </UpdateParameters>
 </asp:SqlDataSource>
     <br />
-    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary"  PostBackUrl="~/Pages/Management/ManageProductTypes.aspx">Add new Type</asp:LinkButton>
+    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary"  PostBackUrl="ManageProductTypes.aspx">Add new Type</asp:LinkButton>
     <p style="clear: both"></p>
 <br />
 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="sdsProductTypes" Width="50%" AllowPaging="True" AllowSorting="True" DataKeyNames="Id" CellPadding="4" ForeColor="#333333" GridLines="None">

@@ -1,11 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Product.aspx.cs" Inherits="Pages_Product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 80px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table>
+    <table style="width: 75%">
         <tr>
-            <td rowspan="4">
+            <td rowspan="4" class="auto-style1">
                 <asp:Image ID="imgProduct" runat="server" CssClass="detailsImage" />
             </td>
             <td>
@@ -15,7 +20,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="text-align: left">
                 <asp:Label ID="lblDescription" runat="server" CssClass="detailsDescription"></asp:Label>
             </td>
             <td >

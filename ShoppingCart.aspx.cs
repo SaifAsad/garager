@@ -27,7 +27,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
         var cartModel = new CartModel();
         cartModel.DeleteCart(cartId);
 
-        Response.Redirect("~/Pages/ShoppingCart.aspx");
+        Response.Redirect("ShoppingCart.aspx");
     }
 
     private void ddlAmount_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
         //Update purchase with new quantity and refresh page
         CartModel cartModel = new CartModel();
         cartModel.UpdateQuantity(cartId, quantity);
-        Response.Redirect("~/Pages/ShoppingCart.aspx");
+        Response.Redirect("ShoppingCart.aspx");
     }
 
     private void GetPurchasesInCart(string userId)
@@ -84,7 +84,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
             ImageButton btnImage = new ImageButton
             {
                 ImageUrl = string.Format("~/Images/Products/{0}", product.Image),
-                PostBackUrl = string.Format("~/Pages/Product.aspx?id={0}", product.Id)
+                PostBackUrl = string.Format("Product.aspx?id={0}", product.Id)
             };
 
             //Create the delete link
@@ -95,8 +95,9 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
             */
             LinkButton lnkDelete = new LinkButton
             {
-                PostBackUrl = string.Format("~/Pages/ShoppingCart.aspx?productId={0}", cart.id),
+                PostBackUrl = string.Format("ShoppingCart.aspx?productId={0}", cart.id),
                 Text = "Delete Item",
+                CssClass = "btn btn-primary",
                 //ID is needed when working with dynamically generated controlls
                 //will be needed to access this control later in the code 
                 ID = "del" + cart.id,

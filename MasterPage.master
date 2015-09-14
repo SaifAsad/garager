@@ -93,15 +93,15 @@
                         <div class="ws_images">
                             <ul>
                                 <li>
-                                    <img src="data1/images/lamborghinimurccielago.jpg" alt="LAMBORGHINI-MURCCIELAGO" title="LAMBORGHINI-MURCCIELAGO" id="wows1_0" /></li>
+                                    <img src="data1/images/lamborghinimurccielago.jpg" alt="LAMBORGHINI-MURCCIELAGO"  id="wows1_0" /></li>
                                 <li>
-                                    <img src="data1/images/lamborghini_aventador.jpg" alt="LAMBORGHINI_AVENTADOR" title="LAMBORGHINI_AVENTADOR" id="wows1_1" /></li>
+                                    <img src="data1/images/lamborghini_aventador.jpg" alt="LAMBORGHINI_AVENTADOR"  id="wows1_1" /></li>
                                 <li>
                                     <img src="data1/images/camaro.jpg" alt="CAMARO" title="CAMARO" id="wows1_2" /></li>
                                 <li><a href="http://wowslider.com">
-                                    <img src="data1/images/dodgecharger.jpg" alt="wowslider.com" title="DODGE-CHARGER" id="wows1_3" /></a></li>
+                                    <img src="data1/images/dodgecharger.jpg" alt="wowslider.com"  id="wows1_3" /></a></li>
                                 <li>
-                                    <img src="data1/images/ferrarienzo.jpg" alt="Ferrari-Enzo" title="Ferrari-Enzo" id="wows1_4" /></li>
+                                    <img src="data1/images/ferrarienzo.jpg" alt="Ferrari-Enzo"  id="wows1_4" /></li>
                             </ul>
                         </div>
                         <div class="ws_bullets">
@@ -135,6 +135,9 @@
             </div>
         </div>
     </form>
+    <footer class="footer">
+        <p>&copy; Garager 2015</p>
+      </footer>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
 </body>

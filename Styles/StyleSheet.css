@@ -84,13 +84,15 @@ a:visited {
     clear: both;
 }
 
-/*Webshop */
+/*Garager */
 #ContentPlaceHolder1_pnlProducts div, table {
     float: left;
-    width: 250px;
+    width: 652px;
     height: 250px;
     text-align: center;
     background-color: lavender;
+    /*margin-right: 60px;*/
+    margin: auto;
 }
 
 .productName {
@@ -100,7 +102,7 @@ a:visited {
 
 .productPrice {
     font-family: arial,helvetica,sans-serif;
-    color: #FFB600;
+    color: #a70808;
 }
 
 .productImage {
@@ -122,7 +124,7 @@ a:visited {
 
 .detailsDescription {
     font-style: italic;
-    width: 400px;
+    width: 800px;
 }
 
 .detailsPrice {
@@ -157,7 +159,7 @@ a:visited {
 .CartTable
 {
     text-align: center;
-    border: 15px solid #f5f4f2;
+    border: 15px solid #a70808;
     margin-bottom: 10px;
     width: 100%;
     padding: 10px;

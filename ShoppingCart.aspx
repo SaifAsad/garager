@@ -7,33 +7,33 @@
 
     </asp:Panel>
 
-    <table>
+    <table style="width:50%">
         <tr>
-            <td><b>Total: </b></td>
+            <td style="text-align: left"><b>Total: </b></td>
             <td><asp:Literal ID="litTotal" runat="server" Text="" /></td>
         </tr>
 
         <tr>
-            <td><b>Vat: </b></td>
+            <td style="text-align: left"><b>GST: </b></td>
             <td><asp:Literal ID="litVat" runat="server" Text="" /></td>
         </tr>
 
         <tr>
-            <td><b>Shipping: </b></td>
+            <td style="text-align: left"><b>Shipping: </b></td>
             <td>$ 15</td>
         </tr>
 
         <tr>
-            <td><b>Total Amount: </b></td>
+            <td style="text-align: left"><b>Total Amount: </b></td>
             <td><asp:Literal ID="litTotalAmount" runat="server" Text="" /></td>
         </tr>
 
         <tr>
             <td>
-                <asp:LinkButton ID="lnkContinue" runat="server" PostBackUrl="~/Index.aspx" Text="Contiue Shopping" />
+                <asp:LinkButton ID="lnkContinue" runat="server" PostBackUrl="~/Index.aspx" Text="Contiue Shopping" CssClass="btn btn-primary btn-sm"/>
                 OR
-               <asp:Button ID="btnCheckOut" runat="server" Text="Continue to Checkout" PostBackUrl="Success.aspx"
-                   cssClass="btn btn-primary btn-lg" Width="250px"/>
+                <asp:Button ID="btnCheckOut" runat="server" Text="Continue to Checkout" PostBackUrl="Success.aspx"
+                    CssClass="btn btn-primary" />
             </td>
         </tr>
     </table>
